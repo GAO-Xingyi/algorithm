@@ -1,4 +1,2 @@
-package 题库;
-
-public class 链表反转 {
+package 题库;public class 链表反转 {
 }
