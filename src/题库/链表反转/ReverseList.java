@@ -15,7 +15,18 @@ public class ReverseList {
     }
 
     public static ListNode recursion(ListNode head){
-
-        return null;
+        if(head.next != null || head != null){
+        /**
+         * 需要从最后一个开始，就使用递归递归到最后一个元素
+         * 然后，在从后往前实现
+         * 注意这里递归的时候，需要判断递归是否越界
+         * 否则，会无限的进行下去
+         * 且整个链表不为空
+         */
+            recursion(head.next);
+            head.next.next = head;
+            head.next = null;
+            return null;
+        }else{return head;}
     }
 }
